@@ -111,6 +111,7 @@ Pair *searchTreeMap(TreeMap *tree, void *key) {
       }
       else
         current = current -> right;
+        return NULL;
     }
   }
   
