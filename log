@@ -34,3 +34,9 @@ treemap.c:74:20: error: initialization of ‘int’ from ‘int (*)(void *, void
 cc1: all warnings being treated as errors
 Compilation failed
 1acdd51
+Thu 14 Sep 2023 07:51:07 PM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  4|7
+total_score: 5/70
+885844f
