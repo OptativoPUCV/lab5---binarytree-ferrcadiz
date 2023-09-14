@@ -109,9 +109,10 @@ Pair *searchTreeMap(TreeMap *tree, void *key) {
       if(comparar < 0){
         current = current -> left;
       }
-      else
+      else{
         current = current -> right;
         return NULL;
+      }  
     }
   }
   
