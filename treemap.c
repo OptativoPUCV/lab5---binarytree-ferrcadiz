@@ -60,7 +60,7 @@ void insertTreeMap(TreeMap *tree, void *key, void *value) {
   while (current != NULL){
     if(comparar == 0){
       return ;
-    }
+    } 
     else{
       parent = current;
       if(comparar < 0){
@@ -90,7 +90,15 @@ void insertTreeMap(TreeMap *tree, void *key, void *value) {
   tree -> current = newNodo;
 }
 
-TreeNode *minimum(TreeNode *x) { return NULL; }
+TreeNode *minimum(TreeNode *x) { 
+  if(x == NULL) return NULL;
+
+  while(x -> left != NULL){
+    x = x -> left;
+  }
+
+  return x; 
+}
 
 void removeNode(TreeMap *tree, TreeNode *node) {}
 
