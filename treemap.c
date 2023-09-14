@@ -71,6 +71,11 @@ void insertTreeMap(TreeMap *tree, void *key, void *value) {
     }
   }
 
+  TreeNode *newNodo = createTreeNode(key, value);
+  if(newNodo == NULL) return;
+
+  newNodo -> parent = parent;
+  
   
 }
 
