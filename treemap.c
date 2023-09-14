@@ -55,9 +55,9 @@ void insertTreeMap(TreeMap *tree, void *key, void *value) {
   TreeNode *parent = NULL;
   TreeNode *current = tree -> root;
 
-  while (current != NULL){
-    int comparar = tree -> lower_than(key, current -> pair -> key);
+  int comparar = tree -> lower_than(key, current -> pair -> key);
 
+  while (current != NULL){
     if(comparar == 0){
       return ;
     }
