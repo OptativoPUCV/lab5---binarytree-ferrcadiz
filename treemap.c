@@ -75,8 +75,19 @@ void insertTreeMap(TreeMap *tree, void *key, void *value) {
   if(newNodo == NULL) return;
 
   newNodo -> parent = parent;
+
+  if(parent == NULL){
+    tree -> root = newNodo;
+  }
+  else{
+    if(comparar < 0){
+      parent -> left = newNodo;
+    }
+    else
+      parent -> right = newNodo;
+  }
   
-  
+  tree -> current = newNodo;
 }
 
 TreeNode *minimum(TreeNode *x) { return NULL; }
@@ -109,10 +120,8 @@ Pair *searchTreeMap(TreeMap *tree, void *key) {
       if(comparar < 0){
         current = current -> left;
       }
-      else{
+      else
         current = current -> right;
-        return NULL;
-      }  
     }
   }
   

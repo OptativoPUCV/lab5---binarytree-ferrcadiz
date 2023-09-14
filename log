@@ -83,3 +83,14 @@ Thu 14 Sep 2023 08:36:45 PM UTC:
  tests:  6|7
 total_score: 5/70
 1fe5f20
+Thu 14 Sep 2023 08:40:42 PM UTC: 
+ treemap.c | 15 ++++++++++++---
+ 1 file changed, 12 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:83:8: error: ‘comparar’ undeclared (first use in this function)
+   83 |     if(comparar < 0){
+      |        ^~~~~~~~
+treemap.c:83:8: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+beea715
