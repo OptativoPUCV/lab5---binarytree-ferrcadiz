@@ -71,21 +71,20 @@ void insertTreeMap(TreeMap *tree, void *key, void *value) {
     }
   }
   
-  if(tree -> lower_than(key, parent -> pair -> key)){
-    parent -> left = newNodo;
-  }
-  else{
-    parent -> right = newNodo;
+    if(tree -> lower_than(key, parent -> pair -> key)){
+      parent -> left = newNodo;
+    }
+    else{
+      parent -> right = newNodo;
+    
+      newNodo -> parent = newNodo;
+      tree -> current = newNodo;
+    }
 
-    newNodo -> parent = newNodo;
-    tree -> current = newNodo;
-  }
-  else{
     tree -> root = newNodo;
     tree -> current = newNodo;
-  }
-  
 }
+
 
 TreeNode *minimum(TreeNode *x) { 
   if(x == NULL) return NULL;
