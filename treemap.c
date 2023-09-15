@@ -208,9 +208,9 @@ Pair *upperBound(TreeMap *tree, void *key) {
     }
 
     if(tree -> lower_than(aux -> pair -> key, key)) return NULL;
-  }
-  
-  return aux -> pair; 
+
+    return aux -> pair;
+  } 
 }
 
 Pair *firstTreeMap(TreeMap *tree) { 
