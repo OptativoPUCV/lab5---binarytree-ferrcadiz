@@ -135,7 +135,7 @@ Pair *searchTreeMap(TreeMap *tree, void *key) {
   if(tree == NULL || tree -> root == NULL) return NULL;
 
   TreeNode *current = tree -> root;
-  while (current < 1){
+  while (current == NULL){
     int comparar = tree -> lower_than(key, current -> pair -> key);
     if(comparar == 0){
       tree -> current = current;
