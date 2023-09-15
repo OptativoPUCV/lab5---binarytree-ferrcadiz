@@ -81,28 +81,12 @@ void insertTreeMap(TreeMap *tree, void *key, void *value) {
       parent -> right = newNodo;
 
     newNodo -> parent = newNodo;
-    tree -> current
-  }
-
-  
-  
-
-  newNodo -> parent = parent;
-
-  if(parent == NULL){
-    tree -> root = newNodo;
+    tree -> current = newNodo;
   }
   else{
-    if(comparar < 0){
-      parent -> left = newNodo;
-    }
-    else
-      parent -> right = newNodo;
+    tree -> root = newNodo;
+    tree -> current = newNodo;
   }
-  
-  tree -> current = newNodo;
-  }
-
   
 }
 
