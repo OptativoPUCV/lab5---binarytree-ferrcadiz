@@ -260,3 +260,35 @@ treemap.c:55:13: error: unused variable ‘parent’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 e9a89fa
+Fri 15 Sep 2023 05:11:36 AM UTC: 
+ treemap.c | 18 +++++++++++++-----
+ 1 file changed, 13 insertions(+), 5 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:69:20: error: ‘TreeMap’ has no member named ‘low_than’; did you mean ‘lower_than’?
+   69 |         if(tree -> low_than(key, current -> pair -> key)){
+      |                    ^~~~~~~~
+      |                    lower_than
+treemap.c:73:7: error: ‘else’ without a previous ‘if’
+   73 |       else
+      |       ^~~~
+treemap.c:84:10: error: statement with no effect [-Werror=unused-value]
+   84 |     tree -> current
+      |     ~~~~~^~~~~~~~~~
+treemap.c:84:20: error: expected ‘;’ before ‘}’ token
+   84 |     tree -> current
+      |                    ^
+      |                    ;
+   85 |   }
+      |   ~                 
+treemap.c:96:8: error: ‘comparar’ undeclared (first use in this function)
+   96 |     if(comparar < 0){
+      |        ^~~~~~~~
+treemap.c:96:8: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c: At top level:
+treemap.c:107:1: error: expected identifier or ‘(’ before ‘}’ token
+  107 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+708414e
