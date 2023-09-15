@@ -222,5 +222,5 @@ Pair *nextTreeMap(TreeMap *tree) {
 
   tree -> current = current;
   
-  return; 
+  return tree -> current -> pair; 
 }
