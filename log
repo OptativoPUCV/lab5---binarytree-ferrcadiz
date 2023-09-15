@@ -547,3 +547,21 @@ treemap.c:199:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 4d9372a
+Fri 15 Sep 2023 06:10:34 AM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘firstTreeMap’:
+treemap.c:196:24: error: expected ‘;’ before ‘return’
+  196 |   tree -> current = min
+      |                        ^
+      |                        ;
+  197 | 
+  198 |   return NULL;
+      |   ~~~~~~                
+treemap.c:199:1: error: control reaches end of non-void function [-Werror=return-type]
+  199 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+ea5cc80
