@@ -196,3 +196,25 @@ treemap.c:21:5: note: declared here
       |     ^~~~~~~~
 Compilation failed
 ee49028
+Fri 15 Sep 2023 04:45:40 AM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:126:19: error: passing argument 1 of ‘is_equal’ makes pointer from integer without a cast [-Werror=int-conversion]
+  126 |       if(is_equal(tree -> lower_than(key, current -> pair -> key))){
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                   |
+      |                   int
+treemap.c:21:23: note: expected ‘TreeMap *’ but argument is of type ‘int’
+   21 | int is_equal(TreeMap *tree, void *key1, void *key2) {
+      |              ~~~~~~~~~^~~~
+treemap.c:126:10: error: too few arguments to function ‘is_equal’
+  126 |       if(is_equal(tree -> lower_than(key, current -> pair -> key))){
+      |          ^~~~~~~~
+treemap.c:21:5: note: declared here
+   21 | int is_equal(TreeMap *tree, void *key1, void *key2) {
+      |     ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+13f6807
