@@ -145,7 +145,7 @@ void removeNode(TreeMap *tree, TreeNode *node) {
   
   //caso con dos hijos
   else{
-    TreeNode* min = minium(node -> right);
+    TreeNode* min = minimum(node -> right);
 
     node -> pair -> key = min -> pair -> key;
     node -> pair -> value = min -> pair -> value;
@@ -153,7 +153,6 @@ void removeNode(TreeMap *tree, TreeNode *node) {
     removeNode(tree, min);
   }
   
-
 }
 
 void eraseTreeMap(TreeMap *tree, void *key) {
