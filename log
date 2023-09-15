@@ -372,3 +372,13 @@ treemap.c:114:17: error: expected identifier before ‘)’ token
       |                 ^
 Compilation failed
 13bc64c
+Fri 15 Sep 2023 05:38:36 AM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘removeNode’:
+treemap.c:115:5: error: expected expression before ‘}’ token
+  115 |     }
+      |     ^
+Compilation failed
+51a0e81
