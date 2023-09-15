@@ -141,20 +141,20 @@ void removeNode(TreeMap *tree, TreeNode *node) {
           node -> left -> parent = node -> parent;
         }
       }
+    
+  
+      //caso con dos hijos
+      else{
+        TreeNode* min = minimum(node -> right);
+    
+        node -> pair -> key = min -> pair -> key;
+        node -> pair -> value = min -> pair -> value;
+    
+        removeNode(tree, min);
+      }
     }
-  
-  //caso con dos hijos
-  else{
-    TreeNode* min = minimum(node -> right);
-
-    node -> pair -> key = min -> pair -> key;
-    node -> pair -> value = min -> pair -> value;
-
-    removeNode(tree, min);
   }
-  
 }
-
 void eraseTreeMap(TreeMap *tree, void *key) {
   if (tree == NULL || tree->root == NULL) return;
 
