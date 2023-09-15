@@ -55,16 +55,21 @@ void insertTreeMap(TreeMap *tree, void *key, void *value) {
   TreeNode *parent = NULL;
   TreeNode *current = tree -> root;
 
-  int comparar = tree -> lower_than(key, current -> pair -> key);
+  int comparar = tree -> lower_than(key, current
 
-  while (current != NULL){
-    if(comparar == 0){
-      return ;
-    } 
-    else{
+  if(current != NULL){
+
+    TreeNode* parent = NULL;
+
+    while (current != NULL){
       parent = current;
-      if(comparar < 0){
-        current = current -> left;
+      if(is_equal(tree, comparar -> pair -> key, key)){
+        return;
+      }
+      else{
+        if(tree -> low_than(key, current -> pair -> key)){
+          current = current -> left;
+        }
       }
       else
         current = current -> right;
@@ -88,6 +93,9 @@ void insertTreeMap(TreeMap *tree, void *key, void *value) {
   }
   
   tree -> current = newNodo;
+  }
+
+  
 }
 
 TreeNode *minimum(TreeNode *x) { 
