@@ -198,4 +198,10 @@ Pair *firstTreeMap(TreeMap *tree) {
   return min -> pair; 
 }
 
-Pair *nextTreeMap(TreeMap *tree) { return NULL; }
+Pair *nextTreeMap(TreeMap *tree) { 
+  if(tree == NULL || tree -> root == NULL) return NULL;
+
+  
+  
+  return NULL; 
+}
