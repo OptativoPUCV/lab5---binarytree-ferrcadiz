@@ -193,7 +193,7 @@ Pair *firstTreeMap(TreeMap *tree) {
 
   TreeNode* min = minimum(tree -> root);
 
-  tree -> current = min
+  tree -> current = min;
   
   return NULL; 
 }
